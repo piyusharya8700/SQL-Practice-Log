@@ -24,4 +24,4 @@ values('a', 'pa123'),
     ('d', 'pa456'), 
     ('e', 'pa567');  
 
-select u.username, p.expiry from users u join passport p on u.passport_id = p.passport_id
+select u.username, p.expiry as passport_expdate from users u join passport p on u.passport_id = p.passport_id
