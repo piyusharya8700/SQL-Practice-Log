@@ -20,6 +20,6 @@ This section of the repository contains a hands-on implementation of a relationa
 ### 📊 Visual Script Reference
 Below is the optimized, production-ready schema design for this phase:
 
-![SQL Script][ONE-TO-ONE.png]
+[SQL Script][ONE-TO-ONE.png]
 
 *The raw script tracking this implementation can be viewed directly in the **fixed data integrity** branch.*
