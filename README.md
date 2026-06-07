@@ -23,3 +23,6 @@ Below is the optimized, production-ready schema design for this phase:
 ![SQL Script](ONE-TO-ONE.png)
 
 *The raw script tracking this implementation can be viewed directly in the [one_to_one.sql](./one_to_one.sql) file.*
+[SQL Script][ONE-TO-ONE.png]
+
+*The raw script tracking this implementation can be viewed directly in the **fixed data integrity** branch.*
