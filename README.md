@@ -22,7 +22,7 @@ This section of the repository contains a hands-on implementation of a relationa
 ### 📊 Visual Script Reference
 Below is the optimized, production-ready schema design for this phase:
 
-![SQL Script](image/ONE-TO-ONE.png)
+![SQL Script](images/ONE-TO-ONE.png)
 
 *The raw script tracking this implementation can be viewed directly in the [one_to_one.sql](./one_to_one.sql) file.*
 
@@ -46,6 +46,6 @@ To resolve this, I implemented an optimized data cleaning script utilizing a con
 ### 🖼️ Visual Script Reference
 Below is the verified exploration and cleaning workflow implemented in pgAdmin:
 
-![SQL Exploration and Cleaning](image/Order_data_cleaning.png)
+![SQL Exploration and Cleaning](images/Order_data_cleaning.png)
 
 *The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
