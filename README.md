@@ -46,6 +46,6 @@ To resolve this, I implemented an optimized data cleaning script utilizing a con
 ### 🖼️ Visual Script Reference
 Below is the verified exploration and cleaning workflow implemented in pgAdmin:
 
-![SQL Exploration and Cleaning](./Order_data_cleaning.jpg)
+![SQL Exploration and Cleaning](./Order_data_cleaning.png)
 
 *The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
