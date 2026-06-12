@@ -28,7 +28,7 @@ Below is the optimized, production-ready schema design for this phase:
 
 ---
 
-## 📈 Phase 2: Retail Sales & Operational Logistics Analysis
+## Retail Sales & Operational Logistics Analysis
 
 ### 🎯 Business Objective
 In this phase, I analyzed a massive retail order log containing over 185,000 transaction records to calculate gross corporate revenue and identify customer loyalty segments using PostgreSQL.
