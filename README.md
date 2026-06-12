@@ -51,7 +51,7 @@ Below is the verified exploration and cleaning workflow implemented in pgAdmin:
 *The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
 
 #### Date Boundary Filtering Script:
-![Time-Series Queries](images/more queries.jpg)
+![Time-Series Queries](images/more_queries.jpg)
 
 ### 📊 Time-Series Insights & Data Verification
 By isolating the transaction data for individual months, I performed a quality check on how dates are stored in the database:
