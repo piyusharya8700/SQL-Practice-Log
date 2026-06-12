@@ -49,3 +49,13 @@ Below is the verified exploration and cleaning workflow implemented in pgAdmin:
 ![SQL Exploration and Cleaning](images/Order_data_cleaning.png)
 
 *The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
+
+#### Date Boundary Filtering Script:
+![Time-Series Queries](images/more queries.png)
+
+### 📊 Time-Series Insights & Data Verification
+By isolating the transaction data for individual months, I performed a quality check on how dates are stored in the database:
+* **Data Continuity Check:** The queries confirm that the database cleanly transitions from January (`< '2017-02-01'`) into February (`>= '2017-02-01'`) without any missing dates or format breaking.
+* **Distinct Date Tracking:** Using `SELECT DISTINCT` allowed me to verify that orders were actively being placed on consecutive days throughout the entire month, ensuring there are no dead zones or system logging gaps in early 2017.
+
+*The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
