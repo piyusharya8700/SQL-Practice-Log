@@ -28,3 +28,5 @@ select distinct customer_status from orders
 
 -- now lets see the jan details
 select distinct date_order_was_placed from orders where date_order_was_placed < '2017-02-01' order by date_order_was_placed
+-- now lets see for feb
+select distinct date_order_was_placed from orders where date_order_was_placed >= '2017-02-01' and date_order_was_placed < '2017-03-01' order by date_order_was_placed
