@@ -73,7 +73,7 @@ To profile the order volumes without cluttering the report, I implemented two di
 * **Individual Volume Breakdown:** Implemented a `GROUP BY` collection paired with an aggregate `HAVING` constraint to isolate smaller item distributions (quantities 1 through 5) dynamically.
 
 #### Quantity Distribution Workflow Script:
-![Quantity Analysis Queries](images/qtybasedinsights.jpg)
+![Quantity Analysis Queries](images/qtybasedinsights.png)
 
 ### 📊 Operational Insights Discovered
 * **Row-Level Pre-Filtering:** By filtering columns via `WHERE`, the engine computes rapid item totals before execution, making bulk analysis faster on heavy transaction logs.
