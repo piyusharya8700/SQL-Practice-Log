@@ -59,3 +59,22 @@ By isolating the transaction data for individual months, I performed a quality c
 * **Distinct Date Tracking:** Using `SELECT DISTINCT` allowed me to verify that orders were actively being placed on consecutive days throughout the entire month, ensuring there are no dead zones or system logging gaps in early 2017.
 
 *The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
+
+---
+
+## 📦 Order Quantity Distribution Analysis
+
+### 🎯 Objective
+To analyze customer buying behavior and distinguish between standard consumer retail habits and bulk commercial purchases within the dataset.
+
+### 🔍 SQL Methodology
+To profile the order volumes without cluttering the report, I implemented two distinct filtering techniques to isolate specific item limits:
+* **Bulk Order Tracking:** Utilized a row-level `WHERE` clause filtering system to capture and count transactions containing more than 5 items.
+* **Individual Volume Breakdown:** Implemented a `GROUP BY` collection paired with an aggregate `HAVING` constraint to isolate smaller item distributions (quantities 1 through 5) dynamically.
+
+#### Quantity Distribution Workflow Script:
+![Quantity Analysis Queries](images/qtybasedinsights.jpg)
+
+### 📊 Operational Insights Discovered
+* **Row-Level Pre-Filtering:** By filtering columns via `WHERE`, the engine computes rapid item totals before execution, making bulk analysis faster on heavy transaction logs.
+* **Aggregate Post-Filtering:** Grouping data and applying the `HAVING` condition allows the business to safely isolate individual small-scale metrics without modifying or dropping high-volume commercial rows from the overall table infrastructure.
