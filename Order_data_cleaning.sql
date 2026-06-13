@@ -30,3 +30,8 @@ select distinct customer_status from orders
 select distinct date_order_was_placed from orders where date_order_was_placed < '2017-02-01' order by date_order_was_placed
 -- now lets see for feb
 select distinct date_order_was_placed from orders where date_order_was_placed >= '2017-02-01' and date_order_was_placed < '2017-03-01' order by date_order_was_placed
+
+-- now lets see how many orders where quantity is more than 5
+select count(*) from orders where quantity_ordered>5
+-- now lets see how many orders for 1 to 5 individually
+select quantity_ordered, count(*) from orders group by quantity_ordered having quantity_ordered<6
