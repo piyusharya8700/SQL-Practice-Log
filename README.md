@@ -4,6 +4,7 @@ A structured repository dedicated to documenting my hands-on learning journey, d
 
 ## 📁 Repository Structure
 * `one_to_one.sql`: Implementing 1:1 relationship constraints using Primary and Foreign Keys to map users to unique documents (Passports).
+* `one_to_many.sql`: Designing a 1:M constraint system linking dynamic entity nodes (YouTube Channels to hosted Videos) with relational cascading mechanics.
 * `orders_data_cleaning.sql`: Exploring massive transaction datasets, detecting data anomalies, and applying conditional `CASE` updates for text standardization.
 
 ## 🛠️ Tech Stack
@@ -25,6 +26,23 @@ Below is the optimized, production-ready schema design for this phase:
 ![SQL Script](images/ONE-TO-ONE.png)
 
 *The raw script tracking this implementation can be viewed directly in the [one_to_one.sql](./one_to_one.sql) file.*
+
+---
+
+## 🌿 Database Architecture: One-to-Many Relationships
+This module expands on relational design by structuring a foundational **One-to-Many (1:M)** cardinality system—modeling how real-world data points correlate asynchronously (e.g., a creator platform architecture).
+
+### Key Concepts Practiced:
+* **Parent-to-Child Mapping:** Enforcing database schema restrictions where a single parent record (`channel`) can possess zero, one, or multiple dependent child records (`videos`).
+* **Foreign Key Referential Integrity:** Mapping child rows dynamically using structural table constraints to prevent orphan data entry.
+* **Relational Data Retrieval:** Writing clean `INNER JOIN` statements with concise table aliasing to rebuild nested models back into unified datasets.
+
+### 📊 Visual Script Reference
+Below is the production-ready script snippet showcasing the architecture and entity mapping validation:
+
+![One to Many Schema Blueprint](one-to-many.jpg)
+
+*The raw script tracking this implementation can be viewed directly in the [one_to_many.sql](./one_to_many.sql) file.*
 
 ---
 
