@@ -40,7 +40,7 @@ This module expands on relational design by structuring a foundational **One-to-
 ### 📊 Visual Script Reference
 Below is the production-ready script snippet showcasing the architecture and entity mapping validation:
 
-![One to Many Schema Blueprint](one-to-many.jpg)
+![One to Many Schema Blueprint](one-to-many.png)
 
 *The raw script tracking this implementation can be viewed directly in the [one_to_many.sql](./one_to_many.sql) file.*
 
