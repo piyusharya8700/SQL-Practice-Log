@@ -20,11 +20,15 @@ This section of the repository contains a hands-on implementation of a relationa
 ### Key Concepts Practiced:
 * **Data Integrity Constraints:** Utilizing `UNIQUE` and `FOREIGN KEY` parameters to prevent data corruption and duplicate identity assignments.
 * **Join Mechanics:** Comparing standard relational mapping via `INNER JOIN` against relational matrices using `CROSS JOIN`.
+* **Conditional Row Filtering:** Applying precise `IN` string matching and relative timestamp boundaries (`> NOW()`) to extract active, targeted documentation profiles.
 
 ### 📊 Visual Script Reference
 Below is the optimized, production-ready schema design for this phase:
 
 ![SQL Script](images/ONE-TO-ONE.png)
+
+#### Target Profile and Expiry Verification Script:
+![Target Queries Evaluation](images/one_to_one_query1.png)
 
 *The raw script tracking this implementation can be viewed directly in the [one_to_one.sql](./one_to_one.sql) file.*
 
