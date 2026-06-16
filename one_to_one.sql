@@ -34,3 +34,7 @@ values('a', 'pa123'),
 
 select u.username, p.expiry as passport_expdate from users u join passport p on u.passport_id = p.passport_id
 select u.username, p.expiry from users u cross join passport p
+--username passportid where name is luffy zoro and sanji
+select u.username, p.passport_id from users u join passport p on u.passport_id=p.passport_id where u.username in ('luffy', 'zoro', 'sanji')
+-- show everything where expiry date is in future in passport table
+select * from passport where expiry>now()
