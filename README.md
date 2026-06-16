@@ -5,6 +5,7 @@ A structured repository dedicated to documenting my hands-on learning journey, d
 ## 📁 Repository Structure
 * `one_to_one.sql`: Implementing 1:1 relationship constraints using Primary and Foreign Keys to map users to unique documents (Passports).
 * `one_to_many.sql`: Designing a 1:M constraint system linking dynamic entity nodes (YouTube Channels to hosted Videos) with relational cascading mechanics.
+* `many_to_many.sql`: Implementing a M:M schema using a junction table to map student enrollments to platform courses dynamically.
 * `orders_data_cleaning.sql`: Exploring massive transaction datasets, detecting data anomalies, and applying conditional `CASE` updates for text standardization.
 
 ## 🛠️ Tech Stack
@@ -43,6 +44,23 @@ Below is the production-ready script snippet showcasing the architecture and ent
 ![One to Many Schema Blueprint](images/one-to-many.png)
 
 *The raw script tracking this implementation can be viewed directly in the [one_to_many.sql](./one_to_many.sql) file.*
+
+---
+
+## 🔄 Database Architecture: Many-to-Many Relationships
+This module covers advanced relational design by building a **Many-to-Many (M:M)** cardinality system—modeling complex corporate environments where independent entities intersect fluidly (e.g., students enrolling in multiple professional courses).
+
+### Key Concepts Practiced:
+* **Junction Table Implementation:** Setting up an intermediary bridge table (`junc`) to split a complex many-to-many connection into two clean, manageable one-to-many relationships.
+* **Composite Referential Integrity:** Mapping twin independent foreign keys simultaneously (`st_id` and `co_id`) to maintain hard relational links back to parent directories.
+* **Multi-Bridge Relational Joins:** Writing multi-layered `JOIN` sequences running through the junction hub to reconstruct overlapping data vectors into clear, human-readable summary grids.
+
+### 📊 Visual Script Reference
+Below is the validated schema query script checking cross-entity structural alignments:
+
+![Many to Many Schema Blueprint](images/many_to_many.png)
+
+*The raw script tracking this implementation can be viewed directly in the [many_to_many.sql](./many_to_many.sql) file.*
 
 ---
 
