@@ -109,7 +109,7 @@ To convert the standardized data landscape into actionable operational intellige
 * **Time-Series Revenue Truncation:** Implemented PostgreSQL's `DATE_TRUNC('month', ...)` engine tool to automatically bucket raw timestamps into clean calendar blocks to isolate sequential revenue generation.
 
 #### Advanced Metrics Workflow Blueprint:
-![Advanced Financial Analysis Queries](images/analysis questions.png)
+![Advanced Financial Analysis Queries](images/analysisquestions,png)
 
 ### 📊 Strategic Value Extracted
 * **Granular Personalization:** Isolating individual high-spending customer IDs provides immediate targets for premium account management and strategic retention campaigns.
