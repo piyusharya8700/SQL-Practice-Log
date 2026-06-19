@@ -35,3 +35,11 @@ select distinct date_order_was_placed from orders where date_order_was_placed >=
 select count(*) from orders where quantity_ordered>5
 -- now lets see how many orders for 1 to 5 individually
 select quantity_ordered, count(*) from orders group by quantity_ordered having quantity_ordered<6
+
+
+-- Find the top 10 individual customers by total spending
+select sum(total_retail_price_for_this_order) as Total_spent, count(order_id) as Total_orders_placed, customer_id from orders group by customer_id order by Total_spent desc limit 10
+-- Calculate Average Order Value (AOV) and total orders for each membership tier
+select customer_status, count(order_id) as total_orders, sum(total_retail_price_for_this_order) as total_revenue, avg(total_retail_price_for_this_order) as avg_revenue from orders group by customer_status order by avg_revenue  desc 
+-- View total sales and order counts grouped by month
+select date_trunc('month', date_order_was_placed) as order_month, count(order_id) as total_orders, sum(total_retail_price_for_this_order) as monthly_revenue from orders group by 1 order by monthly_revenue
