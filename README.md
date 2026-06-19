@@ -71,7 +71,7 @@ Below is the validated schema query script checking cross-entity structural alig
 ## Retail Sales & Operational Logistics Analysis
 
 ### 🎯 Business Objective
-In this phase, I analyzed a massive retail order log containing over 185,000 transaction records to calculate gross corporate revenue and identify customer loyalty segments using PostgreSQL.
+In this phase, I analyzed a massive retail order log containing over 185,000 transaction records to calculate gross corporate revenue, isolate consumer purchasing power, and track high-level performance trends across core marketing segments using PostgreSQL.
 
 ### 🧹 Data Cleaning & Anomaly Resolution
 During initial data exploration, I discovered a text consistency issue where human data entry had split categories into duplicates (e.g., `'GOLD'` vs `'Gold'`, and `'PLATINUM'` vs `'Platinum'`). This anomaly would distort any financial reporting. 
@@ -97,6 +97,24 @@ Below is the verified exploration and cleaning workflow implemented in pgAdmin:
 By isolating the transaction data for individual months, I performed a quality check on how dates are stored in the database:
 * **Data Continuity Check:** The queries confirm that the database cleanly transitions from January (`< '2017-02-01'`) into February (`>= '2017-02-01'`) without any missing dates or format breaking.
 * **Distinct Date Tracking:** Using `SELECT DISTINCT` allowed me to verify that orders were actively being placed on consecutive days throughout the entire month, ensuring there are no dead zones or system logging gaps in early 2017.
+
+---
+
+## 📈 Advanced Retail Performance & Customer Segmentation
+
+### 🔍 SQL Methodology
+To convert the standardized data landscape into actionable operational intelligence, I built out targeted aggregation scripts focusing on specific corporate growth metrics:
+* **VIP Customer Profiling:** Executed an aggregate tracking query using `SUM(total_retail_price_for_this_order)` alongside a descending sort and a hard `LIMIT 10` boundary to instantly extract the top 10 highest-spending individual consumers.
+* **Membership Tier Basket Yield (AOV):** Grouped transaction counts and total revenue arrays by customer loyalty tiers using `AVG()` to calculate the exact Average Order Value generated per check-out group.
+* **Time-Series Revenue Truncation:** Implemented PostgreSQL's `DATE_TRUNC('month', ...)` engine tool to automatically bucket raw timestamps into clean calendar blocks to isolate sequential revenue generation.
+
+#### Advanced Metrics Workflow Blueprint:
+![Advanced Financial Analysis Queries](images/analysis questions.png)
+
+### 📊 Strategic Value Extracted
+* **Granular Personalization:** Isolating individual high-spending customer IDs provides immediate targets for premium account management and strategic retention campaigns.
+* **Segment Worth Analysis:** Calculating structural AOV reveals that evaluating a tier's baseline volume alone is insufficient; tracking per-transaction basket sizes determines which membership level drives the highest item-to-margin efficiency.
+* **Automated Trend Slicing:** Leveraging `DATE_TRUNC` removes the administrative overhead of writing repetitive date boundary parameters, generating broad historical trends instantly.
 
 *The raw script tracking this implementation can be viewed directly in the [orders_data_cleaning.sql](./orders_data_cleaning.sql) file.*
 
