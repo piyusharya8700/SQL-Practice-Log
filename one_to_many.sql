@@ -12,14 +12,15 @@ create table videos(
     foreign key(channel_id) references channel(channel_id)
 );
 
+
 insert into channel (channel_id, channel_name)
 values ('C101', 'Tech Channel');
 
 insert into videos (video_id, video_name, channel_id)
-values 
-    ('V01', 'iPhone Review', 'C101'),
-    ('V02', 'Laptop Review', 'C101'), 
-    ('V03', 'Camera Review', 'C101');
+values('V01', 'iPhone Review', 'C101'),
+('V02', 'Laptop Review', 'C101'), 
+('V03', 'Camera Review', 'C101');
+
 
 -- Verifying the One-to-Many relationship mapping
 select c.channel_name, v.video_name 
